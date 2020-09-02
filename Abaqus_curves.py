@@ -73,7 +73,7 @@ for x in a:
 
 name_final =''
 num =1
-b = range(3959)  #899
+b = range(3959)  #
 for y in b: 
     name_temp = 'XYData-'+str(num)+','
     name_final = name_final + name_temp
