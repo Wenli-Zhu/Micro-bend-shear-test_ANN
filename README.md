@@ -13,12 +13,12 @@ for d = 0.3:0.05:0.5
         for K = 600:150:1650
             for n = 0.1:0.05:0.5
 ```
-If the tested material mechanical properties satisfy other types of relationsip,  you also can modify this part.
+If the tested material mechanical properties satisfy other types of relationsip,  you also can easily modify this part.
 ```
 sigma_true = sigma_y + K*epsilong_ln_pl.^(n);
 ```
 ## Generate FEM using Abaqus/Python
-Open the the file `Abaqus_buildModels.py`
+Open the file `Abaqus_buildModels.py`
 Change this line for your own working directory:
 ```
 os.chdir(r"D:\temp_abaqus")
