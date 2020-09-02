@@ -43,3 +43,17 @@ Open the cae file and choose `File--Run Script`. Choose the file `Abaqus_buildMo
 ## Run the simulation and Output generation
 You may use the `Abaqus_run.py` to run all the jobs using Parallel computing. The number for each group of jobs need to be set for your own computer configuration.
 `waitForCompletion` has added. So after Abaqus finish running a group of jobs you specified, Abaqus immediately submit the next set of jobs.
+At least 100GB of hard disk space for the working directory to save all the OBD data files.
+Use `Abaqus_curves.py` for generating excel file for the load-displacement curves. Also, the following lines need to be changed based on your own directory.
+```
+os.chdir(r"D:\temp_abaqus")
+o3 = session.openOdb(name='d:/temp_abaqus/model'+str(n)+'.odb')#
+```
+Save the xlsx file in the working directory your matlab will use. 
+## Using ANN with Matlab
+Open and run the file `Ann_new.m` with Matlab.
+Be sure your xlsx file name and directory are consistent with the Matlab code.
+```
+filename = 'database.xlsx';
+```
+
